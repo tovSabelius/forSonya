@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>proj</title>
+</head>
+
+<body>
+    <main>
+        <section class="cake" data-js-cake="">
+            <div class="cake__congrats">
+                <div class="cake__congrats-description is-hidden" data-js-congrats="">
+                    <div class="code" data-js-code="">
+                        <div class="code__content">
+                            <span>name = "Соня"</span><br>
+                            <span>print(f"С Днём Рождения, {name}!!!")</span>
+                        </div>
+                        <button type="button" class="code__launch" data-js-code-launch="">Запустить код</button>
+                        <div class="code__result is-hidden" data-js-code-result="">
+                            С Днём Рождения, Соня!!!<br><br>
+                            Process finished with exit code 0
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cake__inner container">
+                <div class="cake__inner-candles">
+                    <div class="candle">
+                        <img src="./images/fire.png" alt="" class="cake__inner-icon icon" data-js-candle="">
+                    </div>
+                    <div class="candle">
+                        <img src="./images/fire.png" alt="" class="cake__inner-icon icon" data-js-candle="">
+                    </div>
+                    <div class="candle">
+                        <img src="./images/fire.png" alt="" class="cake__inner-icon icon" data-js-candle="">
+                    </div>
+                </div>
+
+                <div class="cake__inner-parts">
+                    <div class="part"></div>
+                    <div class="part"></div>
+                    <div class="part"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./scripts/index.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+@use '../helpers/index' as *;
+
+
+.code {
+    background-color: rgb(30, 33, 39);
+    padding-inline: rem(10);
+    padding-block: rem(20);
+    font-size: 1rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    @include tablet {
+        font-size: .8rem;
+    }
+
+    @include mobile {
+        font-size: .6rem;
+    }
+
+    @include mobile-s {
+        font-size: .35rem;
+    }
+
+    &__content {
+        line-height: 30px;
+        font-size: .45rem;
+        font-size: 1rem;
+
+        @include mobile {
+            line-height: 10px;
+            font-size: .35rem;
+        }
+
+        @include mobile-s-above {
+            font-size: .55rem;
+            line-height: 20px;
+        }
+    }
+
+    &__launch {
+        background-color: black;
+        border: none;
+        font-size: 0.7rem;
+        color: white;
+        border-radius: 3px;
+        padding: 10px;
+        margin-top: 10px;
+
+        @include mobile {
+            font-size: .5rem;
+            padding: 5px;
+        }
+
+        @include mobile-s-above {
+            font-size: .8rem;
+        }
+
+    }
+
+    &__result {
+        border-top: 2px solid black;
+        padding-top: rem(20);
+        margin-top: rem(20);
+        color: rgb(0, 154, 0);
+        font-size: .55rem;
+
+        &.is-hidden {
+            display: none;
+        }
+
+        @include mobile-s-above {
+            font-size: .8rem;
+        }
+    }
+}

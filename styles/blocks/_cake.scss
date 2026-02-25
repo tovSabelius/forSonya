@@ -1,0 +1,111 @@
+@use '../helpers/index' as *;
+@use '../variables';
+
+.cake {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 7rem;
+    padding-block: 1rem;
+    background: radial-gradient(circle at top, #2f1164, #17205f);
+
+    @include mobile {
+        row-gap: 4rem;
+    }
+
+    &.all-blowed {
+        background: radial-gradient(circle at top, #561eb6, #2b3bb0);
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        width: 60%;
+        height: 100%;
+
+        @include mobile {
+            width: 90%;
+        }
+
+        &-candles {
+            display: flex;
+            justify-content: space-around;
+
+            .candle {
+                width: rem(30);
+                height: 100%;
+                background-color: #ffffff;
+                position: relative;
+                border-top-left-radius: 50px;
+                border-top-right-radius: 50px;
+
+                .icon {
+                    position: absolute;
+                    inset: 0;
+                    transform: translateY(-100%);
+
+                    &.is-blowed {
+                        opacity: 0;
+                    }
+                }
+
+
+            }
+        }
+
+        &-parts {
+            grid-row: span 3;
+            display: flex;
+            flex-direction: column;
+
+            .part {
+                &:nth-child(2n) {
+                    background-color: var(--cake-color-even);
+                }
+                &:nth-child(2n+1) {
+                    background-color: var(--cake-color-odd);
+                }
+
+                &:first-child {
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                }
+
+                &:last-child {
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+
+                width: 100%;
+                height: 33.333333%;
+                background-color: green;
+            }
+        }
+    }
+
+    &__congrats {
+        &-description {
+            margin: 0;
+            color: white;
+            font-size: 1rem;
+
+            &.is-hidden {
+                display: none;
+            }
+        }
+        @include laptop {
+            width: 50%;
+        }
+
+        @include mobile {
+            width: 90%;
+        }
+        
+        @include mobile-s {
+            width: 90%;
+        }
+    }
+}
